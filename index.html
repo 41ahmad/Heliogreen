@@ -1,70 +1,514 @@
-<html lang="en" class="pc chrome116"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<meta name="csrf-param" content="authenticity_token">
-<meta name="csrf-token" content="UBZXdfowz9nBuqDcq0zq6vOoCb4OZGWp/RTXO9dbMi4akykCorm+YXLYqienjr2ugt6xNcRNSUX4UyVk+ZYkpg==">
-<title>Cute jumping sheep with three.js</title>
-<link rel="dns-prefetch" href="https://apc.codepen.io">
-<link rel="dns-prefetch" href="https://fonts.googleapis.com">
-<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/global/global-e9ee9603eda83962b71c7e44dbd82d62e47f0741d7d698d0e9bbaea1e5ff5246.css">
-<link rel="stylesheet" media="all" href="https://cpwebassets.codepen.io/assets/page/page-759641c2fa65e10cb48297dbf07868663d7677f214d69c2cb685f09f2c268f64.css">
-<link rel="stylesheet" media="screen" href="https://cpwebassets.codepen.io/assets/packs/css/everypage-c3a8be47.css">
-<meta name="description" content="Little low poly sheep made with three.js. Click to jump and feel sleepy ^^...">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:site" content="@CodePen">
-<meta name="twitter:title" content="Cute jumping sheep with three.js">
-<meta name="twitter:description" content="Little low poly sheep made with three.js. Click to jump and feel sleepy ^^...">
-<meta name="twitter:image" content="https://shots.codepen.io/username/pen/GWbBrx-800.jpg?version=1581007020">
-<meta name="twitter:creator" content="@lizakobrazova">
-<meta property="og:image" content="https://shots.codepen.io/username/pen/GWbBrx-800.jpg?version=1581007020" itemprop="thumbnailUrl">
-<meta property="og:title" content="Cute jumping sheep with three.js">
-<meta property="og:url" content="https://codepen.io/elliezen/details/GWbBrx">
-<meta property="og:site_name" content="CodePen">
-<meta property="og:description" content="Little low poly sheep made with three.js. Click to jump and feel sleepy ^^...">
-<link rel="alternate" type="application/json+oembed" href="https://codepen.io/api/oembed?url=https%3A%2F%2Fcodepen.io%2Felliezen%2Fpen%2FGWbBrx&amp;format=json" title="Cute jumping sheep with three.js">
-<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
-<meta name="apple-mobile-web-app-title" content="CodePen">
-<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
-<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
-<style id="_goober"> @keyframes go2264125279{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go3020080000{from{transform:scale(0);opacity:0;}to{transform:scale(1);opacity:1;}}@keyframes go463499852{from{transform:scale(0) rotate(90deg);opacity:0;}to{transform:scale(1) rotate(90deg);opacity:1;}}@keyframes go1268368563{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}@keyframes go1310225428{from{transform:scale(0) rotate(45deg);opacity:0;}to{transform:scale(1) rotate(45deg);opacity:1;}}@keyframes go651618207{0%{height:0;width:0;opacity:0;}40%{height:0;width:6px;opacity:1;}100%{opacity:1;height:10px;}}@keyframes go901347462{from{transform:scale(0.6);opacity:0.4;}to{transform:scale(1);opacity:1;}}.go4109123758{z-index:9999;}.go4109123758 > *{pointer-events:auto;}</style><script charset="utf-8" src="https://cpwebassets.codepen.io/assets/packs/js/ItemDetailsPage-b446668a30cb1a208001.chunk.js"></script><script src="https://srv.buysellads.com/ads/CK7IV23W.json?callback=customJSONPCallback"></script></head>
-<body class="details not-team logged-out">
-<div id="react-page"><header class="main-header" style=""><div class="EditorHeader-module_root-cpo0V header-wrap HeaderWrap-module_root-PsKVw"><h1 class="Logo-module_root-ojP5q" data-component="Logo" data-test-id="logo"><a href="/" class="Logo-module_small-T4UEU"><svg viewBox="0 0 100 100"><path d="M100 34.2c-.4-2.6-3.3-4-5.3-5.3-3.6-2.4-7.1-4.7-10.7-7.1-8.5-5.7-17.1-11.4-25.6-17.1-2-1.3-4-2.7-6-4-1.4-1-3.3-1-4.8 0-5.7 3.8-11.5 7.7-17.2 11.5L5.2 29C3 30.4.1 31.8 0 34.8c-.1 3.3 0 6.7 0 10v16c0 2.9-.6 6.3 2.1 8.1 6.4 4.4 12.9 8.6 19.4 12.9 8 5.3 16 10.7 24 16 2.2 1.5 4.4 3.1 7.1 1.3 2.3-1.5 4.5-3 6.8-4.5 8.9-5.9 17.8-11.9 26.7-17.8l9.9-6.6c.6-.4 1.3-.8 1.9-1.3 1.4-1 2-2.4 2-4.1V37.3c.1-1.1.2-2.1.1-3.1 0-.1 0 .2 0 0zM54.3 12.3 88 34.8 73 44.9 54.3 32.4V12.3zm-8.6 0v20L27.1 44.8 12 34.8l33.7-22.5zM8.6 42.8 19.3 50 8.6 57.2V42.8zm37.1 44.9L12 65.2l15-10.1 18.6 12.5v20.1zM50 60.2 34.8 50 50 39.8 65.2 50 50 60.2zm4.3 27.5v-20l18.6-12.5 15 10.1-33.6 22.4zm37.1-30.5L80.7 50l10.8-7.2-.1 14.4z"></path></svg><span class="screen-reader-text">CodePen Home</span></a><a href="/" class="Logo-module_large-J2pKy"><svg viewBox="0 0 138 26" fill="none" stroke="#fff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" title="CodePen"><path d="M15 8a7 7 0 1 0 0 10m7-8.7L33 2l11 7.3v7.4L33 24l-11-7.3zm0 0 11 7.4 11-7.4m0 7.4L33 9.3l-11 7.4M33 2v7.3m0 7.4V24M52 6h5a7 7 0 0 1 0 14h-5zm28 0h-9v14h9m-9-7h6m11 1h6a4 4 0 0 0 0-8h-6v14m26-14h-9v14h9m-9-7h6m11 7V6l11 14V6"></path></svg><span class="screen-reader-text">CodePen Home</span></a></h1><div class="ItemTitle_root-BLXtW" data-test-id="item-title-area"><div class="ItemTitle_text-t2tKF" data-view="details"><h1 class="ItemTitle_title-skUR3" id="item-title"><a href="https://codepen.io/elliezen/pen/GWbBrx" class="ItemTitle_titleLink-dPGjg" id="editable-title-span" title="Cute jumping sheep with three.js">Cute jumping sheep with three.js</a></h1><div class="ItemTitle_by-typsS" data-test="AnItemBy"><a class="ItemTitle_ownerLink-L8qgY" href="/elliezen">Liza Kobrazova </a><button data-test="follow-button" data-following="false" title="Follow Liza Kobrazova" class="Button-module_root-xw+9D FollowButton-module_root-Q92Q+ ItemTitle_followButton-2+Mhs follow-user-button" data-size="mini" data-has-icon="true" data-color="green"><svg viewBox="0 0 132.4 132.4" class="FollowButton-module_statusIcon-U62Ef"><path d="M75.4 123.1V75.4h47.7c5.1 0 9.2-4.1 9.3-9.3s-4.2-9.3-9.3-9.3H75.4V9.3c0-5.1-4.1-9.2-9.3-9.3-5.2-.1-9.3 4.2-9.3 9.3V57H9.1C4 57-.1 61.1-.2 66.3c-.1 5.2 4.2 9.3 9.3 9.3h47.7v47.7c0 5.1 4.1 9.2 9.3 9.3s9.3-4.4 9.3-9.5z"></path></svg> Follow</button></div></div></div><button title="Love" data-anon="true" data-view="details" data-item="Pen" data-hashid="GWbBrx" class="Button-module_root-xw+9D EditorHeaderPen-module_loveButton-7F910 loves heart-button"><svg viewBox="-2 0 105 92" class="LoveButtonIcon-module_root-3tVfn"><path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path></svg><span class="screen-reader-text">Love</span></button><a href="https://codepen.io/elliezen/pen/GWbBrx" class="Button-module_root-xw+9D EditorHeaderviewInEditorButton-module_root-dIyoN"><svg viewBox="0 0 100 100" class="EditorHeaderviewInEditorButton-module_viewInEditorIcon-Y2lGW" aria-title="View in Editor"><path d="M24.56 92.536 0 100l7.453-24.583c6.356-.244 17.322 10.792 17.107 17.119zM96.617 32.082l-.475.471L67.383 3.766l.472-.472c12.927-12.94 42.016 15.517 28.762 28.788zM61.64 9.516l28.758 28.785-46.303 46.345c-1.222 1.221-2.234.884-2.234.884l2.314-15.356-14.454.074.072-14.468-15.342 2.312s-.34-1.011.883-2.234L61.64 9.516z"></path></svg> <span class="EditorHeaderviewInEditorButton-module_viewInEditorSpan-9oyEK">View in Editor</span></a><a data-test-id="signup-button" href="/accounts/signup/user/free" class="Button-module_root-xw+9D LogInAndSignUpButtons-module_signupButton-hxnR0" data-color="green">Sign Up</a><a data-test-id="login-button" href="/login" class="Button-module_root-xw+9D LogInAndSignUpButtons-module_loginButton-XjHhF">Log In</a></div></header><div><div class="ItemDetailsPreview_preview-IQiiY"><iframe sandbox="allow-forms allow-modals allow-pointer-lock allow-same-origin allow-scripts allow-presentation" class="ItemDetailsPreview_iframe-qKtz9" frameborder="0" scrolling="no" src="/elliezen/embed/GWbBrx/?theme-id=modal" loading="lazy"></iframe><div class="ItemDetailsPreview_dragHandle-TN2TJ" data-dragging="false" style="cursor: ns-resize;"></div><div class="ItemDetailsPreview_dragHandleCorner-N5A1l" data-dragging="false" style="cursor: nwse-resize;"></div></div><div class="ItemDetailsContent-module_content-Fm5m4"><div class="ItemDetailsContent-module_description-optZu"><div class="RenderedMarkdown-module_root-T9BRK"><p>Little low poly sheep made with three.js. Click to jump and feel sleepy ^^</p></div><div><span class="Tag-module_root-UzSJ1"><a href="/tag/threejs" title="threejs">threejs</a></span><span class="Tag-module_root-UzSJ1"><a href="/tag/low-poly" title="low-poly">low-poly</a></span><span class="Tag-module_root-UzSJ1"><a href="/tag/sheep" title="sheep">sheep</a></span><span class="Tag-module_root-UzSJ1"><a href="/tag/cute" title="cute">cute</a></span><span class="Tag-module_root-UzSJ1"><a href="/tag/cloud" title="cloud">cloud</a></span></div></div><aside class="ItemDetailsContent-module_meta-+1wGd"><div class="ItemDetailsShare-module_root-tHLrh"><span class="ItemDetailsShare-module_shareText-dtqpx">Share</span><span class="ButtonGroup-module_root-RfSlH ItemDetailsShare-module_shareButtonsContainer-OVP3t"><a href="https://twitter.com/intent/tweet?text=Cute%20jumping%20sheep%20with%20three.js&amp;url=https://codepen.io/elliezen/pen/GWbBrx&amp;via=CodePen" title="Share on Twitter" target="_blank" rel="noopener noreferrer" class="Button-module_root-xw+9D ItemDetailsShare-module_shareButton-iu+Xr" data-size="mini"><svg viewBox="0 0 100 100" class="ItemDetailsShare-module_shareIcon-4I9dI"><path d="M100.001 17.942a39.965 39.965 0 0 1-11.783 3.339c4.236-2.624 7.49-6.779 9.021-11.73a40.289 40.289 0 0 1-13.026 5.146C80.47 10.575 75.138 8 69.234 8c-11.33 0-20.518 9.494-20.518 21.205 0 1.662.183 3.281.533 4.833-17.052-.884-32.168-9.326-42.288-22.155a21.637 21.637 0 0 0-2.778 10.659c0 7.357 3.622 13.849 9.127 17.65a19.94 19.94 0 0 1-9.293-2.651c-.002.089-.002.178-.002.268 0 10.272 7.072 18.845 16.458 20.793a19.939 19.939 0 0 1-9.264.365c2.609 8.424 10.187 14.555 19.166 14.726-7.021 5.688-15.867 9.077-25.48 9.077A40.59 40.59 0 0 1 0 82.473C9.08 88.491 19.865 92 31.449 92c37.737 0 58.374-32.312 58.374-60.336 0-.92-.02-1.834-.059-2.743a42.547 42.547 0 0 0 10.237-10.979z"></path></svg></a><a href="https://dev.to/new?prefill=---%0Atitle%3A%20Cute%20jumping%20sheep%20with%20three.js%0Apublished%3A%20true%0Atags%3A%20codepen%0A---%0A%0A%3Cp%3ELittle%20low%20poly%20sheep%20made%20with%20three.js.%20Click%20to%20jump%20and%20feel%20sleepy%20%5E%5E%3C%2Fp%3E%0A%0A%7B%25%20codepen%20https%3A%2F%2Fcodepen.io%2Felliezen%2Fpen%2FGWbBrx%20%25%7D" title="Share on DEV.to" target="_blank" rel="noopener noreferrer" class="Button-module_root-xw+9D ItemDetailsShare-module_shareButton-iu+Xr" data-size="mini"><svg viewBox="0 0 200 200" class="ItemDetailsShare-module_shareIcon-4I9dI"><path d="M188 0H12A12 12 0 0 0 0 12v176a12 12 0 0 0 12 12h176a12 12 0 0 0 12-12V12a12 12 0 0 0-12-12ZM57.64 134.55C52.72 140.9 46 143 29.79 143H15.15V60.06h15.54C49 60.06 54.4 62 59.32 70c2.85 4.67 3.11 6.48 3.5 28.25.52 24.64-.26 30.08-5.18 36.3Zm56-60.24H86.4v19.43h16.84v14.12l-8 .39-8.16.39v19.43l13.34.39 13.21.39V143H96.11c-17 0-17.74-.13-20.72-3.24l-3.24-3.11v-34.88c0-33.29.13-35 2.72-38.34s2.72-3.37 20.73-3.37h18Zm51.56 60c-1.81 4.66-7 8.68-11 8.68-1.94 0-4.92-1.69-7.38-4.28-3.5-3.49-4.93-7-9.07-22.93-2.72-10.36-7.13-27.07-9.85-37.3l-4.92-18.4h8.29c4.53 0 8.29.26 8.29.52 0 .65 12.83 50 13.86 53.24.52 1.69 3.5-7.64 8-25.26l7.26-27.85 8.16-.39c4.4-.26 8 0 8 .39.01 1.53-18.38 70.19-19.68 73.56Z"></path><path d="M45.07 76.77c-2.07-1.68-5-2.46-9.32-2.46H29.4l.26 26.82.39 26.94 6.21-.13c4.54 0 6.87-.78 9.07-2.85 2.72-2.72 2.85-4 2.85-24.35 0-20.99-.13-21.51-3.11-23.97Z"></path></svg></a><a href="https://codepen.io/elliezen/pen/GWbBrx" class="Button-module_root-xw+9D ItemDetailsShare-module_shareButton-iu+Xr" data-size="mini"><svg viewBox="0 0 8 8" class="ItemDetailsShare-module_shareIcon-4I9dI" style="margin-right: 0.25em;"><path d="M5.88.03a1.9 1.9 0 0 0-.53.09c-.27.1-.53.25-.75.47a.5.5 0 1 0 .69.69c.11-.11.24-.17.38-.22.35-.12.78-.07 1.06.22.39.39.39 1.04 0 1.44l-1.5 1.5c-.44.44-.8.48-1.06.47-.26-.01-.41-.13-.41-.13a.5.5 0 1 0-.5.88s.34.22.84.25c.5.03 1.2-.16 1.81-.78l1.5-1.5A1.98 1.98 0 0 0 6.44.07C6.26.03 6.06.03 5.88.04zm-2 2.31c-.5-.02-1.19.15-1.78.75L.6 4.59a1.98 1.98 0 0 0 0 2.81c.56.56 1.36.72 2.06.47.27-.1.53-.25.75-.47a.5.5 0 1 0-.69-.69c-.11.11-.24.17-.38.22-.35.12-.78.07-1.06-.22-.39-.39-.39-1.04 0-1.44l1.5-1.5c.4-.4.75-.45 1.03-.44.28.01.47.09.47.09a.5.5 0 1 0 .44-.88s-.34-.2-.84-.22z"></path></svg> Copy Link</a></span></div><dl class="ItemDetailsMetaData-module_root-1HsFR"><div class="ItemDetailsMetaData-module_meta-W96QO"><dt>Created on</dt><dd><time datetime="2017-04-08 11:00:23 UTC">April 8, 2017</time></dd></div><div class="ItemDetailsMetaData-module_meta-W96QO"><dt>Updated on</dt><dd><time datetime="2020-02-06 16:37:00 UTC">February 6, 2020</time></dd></div></dl><div><div class="itemDetailsStats-module_stat-nVSCM"><h3 class="itemDetailsStats-module_statTitle-oEV0h"><svg viewBox="-2 0 105 92"><path d="M85.24 2.67C72.29-3.08 55.75 2.67 50 14.9 44.25 2 27-3.8 14.76 2.67 1.1 9.14-5.37 25 5.42 44.38 13.33 58 27 68.11 50 86.81 73.73 68.11 87.39 58 94.58 44.38c10.79-18.7 4.32-35.24-9.34-41.71Z"></path></svg> <span class="itemDetailsStats-module_count-s8mr5">276</span> Loves</h3><div class="itemDetailsStats-module_statData-8s+h7"><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/yangtenten"><img src="https://assets.codepen.io/10234678/internal/avatars/users/default.png?format=auto&amp;version=1684221386&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">yangtenten <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/navskyl"><img src="https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">Nessi <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/mehranheydarian"><img src="https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">Mehran <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/Mr-OM"><img src="https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">OSM <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/osama13668-the-vuer"><img src="https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">Osama Kayali <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/7-18m"><img src="https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">lbk <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/Cazmon"><img src="https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">Cazmon <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><a class="ItemDetailsStatAvatar-module_root-QRRqr" href="/MJTomato-xy"><img src="https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0&amp;width=80&amp;height=80" alt="Picture of undefined"><div class="ItemDetailsStatAvatar-module_hoverContent-GkybC"><div class="ItemDetailsStatAvatar-module_hoverContentWrap-9kEok">MJTomato-xy <svg viewBox="-137.8 144.15 30.2 27.5"><path d="M-108.3 159.8c.1-.1.1-.1.1-.2 0 0 0-.1.1-.1.3-.4.5-.9.5-1.5s-.2-1.1-.5-1.5v-.1l-.1-.1c0-.1-.1-.1-.1-.2l-11.2-11.2c-1-1-2.6-1-3.6 0s-1 2.6 0 3.6l6.9 6.9h-19.1c-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5h19.1l-6.9 6.9c-1 1-1 2.6 0 3.6s2.6 1 3.6 0l11.2-11.1z"></path></svg></div></div></a><button class="invisible-button itemDetailsStats-module_moreStatsCount-lcRiJ"> + 268 more</button></div></div><div class="itemDetailsStats-module_stat-nVSCM"><h3 class="itemDetailsStats-module_statTitle-oEV0h"><svg viewBox="0 0 30.5 16.5"><path d="M15.3 0C8.9 0 3.3 3.3 0 8.3c3.3 5 8.9 8.3 15.3 8.3s12-3.3 15.3-8.3C27.3 3.3 21.7 0 15.3 0zm0 14.5c-3.4 0-6.2-2.8-6.2-6.2C9 4.8 11.8 2 15.3 2c3.4 0 6.2 2.8 6.2 6.2 0 3.5-2.8 6.3-6.2 6.3z"></path></svg> <span class="itemDetailsStats-module_count-s8mr5">16,342</span> Views</h3></div></div></aside><div class="ContentBox-module_root-iN54i"><div class="ItemCommentCreate-module_cantCommentMessage-hDWFk"><p>Want to leave a comment or start your own Pen?</p><a class="button button-medium green" href="/accounts/signup/user/free">Sign Up for CodePen</a><a class="button button-medium" href="/login">Log In</a></div><p class="ItemCommentsThread-module_commentCount-qEc0x">1 Comment</p><ol class="ItemCommentsThread-module_commentList--myPJ"><li data-comment="true"><div class="ItemComment-module_commentDetails-J3tq0"><img class="ItemComment-module_authorAvatar-EU2Z8" src="https://assets.codepen.io/965437/internal/avatars/users/default.png?format=auto&amp;version=1535872757&amp;width=80&amp;height=80" width="30" height="30"><a href="/elliezen" class="ItemComment-module_commentAuthor-QBmsC"><em>Liza Kobrazova</em> (@elliezen)</a><time class="ItemComment-module_commentTime-eyA5W" datetime="2017-04-11T14:29:46Z"><time title="April 11, 2017 — 5:29:46 PM" class="" datetime="2017-04-11T14:29:46Z" timeago-id="59">6 years ago</time></time><button class="Button-module_root-xw+9D ItemComment-module_reply-nuTbr" data-size="mini" style="margin-right: 0px;">Reply</button></div><div class="ItemComment-module_commentContent-5j5sK"><div class="RenderedMarkdown-module_root-T9BRK ItemComment-module_commentText-n0JU0"><p>Thank you @danomanion ;)
-Music was made by our creative duo Pxlhead</p></div><div class="ItemCommentActions-module_commentActions-m+3hJ"></div></div></li></ol></div><div class="ItemDetailsLicense-module_root-3yNxy ItemDetailsContent-module_license-h6SwH"><div class="ItemDetailsLicense-module_heading-l-RQa"><h3 class="ItemDetailsLicense-module_title-5I-WH">License</h3><button class="ItemDetailsLicense-module_copy-4tB9L invisible-button"><svg viewBox="0 0 16 18"><path d="M6 0a1 1 0 0 0-1 1v3h2V2h7v8h-1v2h2a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H6Z"></path><path d="M0 7a1 1 0 0 1 1-1h9a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V7Zm2 1v8h7V8H2Z"></path></svg>Copy</button></div><pre class="ItemDetailsLicense-module_license-ESyLH" tabindex="0">Copyright (c) 2023 by Liza Kobrazova (https://codepen.io/elliezen/pen/GWbBrx)
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png">
 
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+    <meta name="apple-mobile-web-app-title" content="CodePen">
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico">
 
-</pre></div></div></div></div>
-<noscript>
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111">
 
-  <input type="checkbox" class="modal-closing-trick" id="modal-closing-trick">
 
-  <div class="overlay noscript-overlay" style="display: block;"></div>
 
-  <div class="modal modal-message group modal-warning">
+  
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831bb44f98c1391d6a4ffda0e1fd302503391ca806e7fcc7b9b87197aec26.js"></script>
 
-    <div class="modal-title">CodePen doesn't work very well without JavaScript.</div>
 
-    <p>We're all for progressive enhancement, but CodePen is a bit unique in that it's all about writing and showing front end code, including JavaScript. It's required to use most of the features of CodePen.</p>
+  <title>CodePen - Cute jumping sheep with three.js</title>
 
-    <p>Need to know how to enable it? <a href="http://enable-javascript.com/" target="_blank" rel="noopener">Go here.</a></p>
+    <link rel="canonical" href="https://codepen.io/elliezen/pen/GWbBrx">
+  
+  
+  
+  
+<style>
+body {
+  margin: 0;
+}
+.world {
+  position: absolute;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: #CCDCDA;
+}
+.world-night {
+  background-color: #1E0F4C;
+}
+.toggle {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px #C40062;
+  background: #F8007E url('https://res.cloudinary.com/elliepooh/image/upload/v1491841750/sun_nyr4z3.svg') center center / 60% no-repeat;
+  cursor: pointer;
+}
+.toggle-night {
+  box-shadow: 0 4px 16px #626EC9;
+  background: #9A96E8 url('https://res.cloudinary.com/elliepooh/image/upload/v1491841746/star_u865qq.svg') center 46% / 60% no-repeat;
+}
+.toggle-music {
+  position: absolute;
+  top: 5rem;
+  left: 1rem;
+  width: 3rem;
+  height: 3rem;
+  background: url('https://res.cloudinary.com/elliepooh/image/upload/v1491889929/music_s7aiet.svg') center center / 60% no-repeat;
+  cursor: pointer;
+}
+.music-off {
+  background: url('https://res.cloudinary.com/elliepooh/image/upload/v1491890054/music-off_nrnsni.svg') center center / 60% no-repeat;
+}
+</style>
 
-    <label class="button button-medium" for="modal-closing-trick">Close this, use anyway.</label>
+  
+  
+  
+</head>
 
-  </div>
+<body translate="no">
+  <div class="world"><canvas width="452" height="332" style="width: 362px; height: 266px;"></canvas></div><a class="toggle toggle-night"></a><a class="toggle-music"></a>
+<audio class="world-music" src="https://res.cloudinary.com/liza/video/upload/v1492853426/sheep_qr3tus.m4a" loop=""></audio>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/84/three.min.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
+      <script id="rendered-js">
+'use strict';
 
-</noscript>
-<textarea id="init-data" style="display:none">{"__browser":{"country":"BY","device":"unknown_device","mobile":false,"name":"chrome","platform":"pc","version":"116"},"__constants":{},"__CPDATA":{"domain_iframe":"https://cdpn.io","environment":"production","host":"codepen.io","iframe_allow":"accelerometer; camera; encrypted-media; display-capture; geolocation; gyroscope; microphone; midi; clipboard-read; clipboard-write; web-share","iframe_sandbox":"allow-forms allow-modals allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-downloads allow-presentation"},"__graphql":{"data":{"data":{"sessionUser":{"id":"VoDkNZ","name":"Captain Anonymous","title":"Captain Anonymous","avatar":"https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0","currentContext":{"id":"VoDkNZ","title":"Captain Anonymous","name":"Captain Anonymous","avatar":"https://assets.codepen.io/t-1/user-default-avatar.jpg?format=auto&amp;version=0","username":"anon","__typename":"User"},"currentTeamId":null,"username":"anon","admin":false,"anon":true,"pro":false,"verified":false,"teams":[],"__typename":"User"}}},"url":"https://codepen.io/graphql","api":"cprails"},"__user":{"anon":true,"base_url":"/anon/","cohorts":[],"current_team_hashid":null,"current_team_id":0,"hashid":"VoDkNZ","id":1,"itemType":"user","name":"Captain Anonymous","paid":false,"tier":0,"username":"anon","created_at":null,"email_verified":null,"collections_count":0,"collections_private_count":0,"followers_count":0,"followings_count":0,"pens_count":0,"pens_private_count":0,"projects_count":0,"projects_private_count":0},"__firebase":{"config":{"apiKey":"AIzaSyBgLAe7N_MdFpuVofMkcQLGwwhUu5tuxls","authDomain":"codepen-store-production.firebaseapp.com","databaseURL":"https://codepen-store-production.firebaseio.com","disabled":false,"projectId":"codepen-store-production"},"token":"eyJhbGciOiJSUzI1NiJ9.eyJhdWQiOiJodHRwczovL2lkZW50aXR5dG9vbGtpdC5nb29nbGVhcGlzLmNvbS9nb29nbGUuaWRlbnRpdHkuaWRlbnRpdHl0b29sa2l0LnYxLklkZW50aXR5VG9vbGtpdCIsImNsYWltcyI6eyJvd25lcklkIjoiVm9Ea05aIiwiYWRtaW4iOmZhbHNlfSwiZXhwIjoxNjk1NDc4MDMwLCJpYXQiOjE2OTU0NzQ0MzAsImlzcyI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInN1YiI6ImZpcmViYXNlLWFkbWluc2RrLThva3lsQGNvZGVwZW4tc3RvcmUtcHJvZHVjdGlvbi5pYW0uZ3NlcnZpY2VhY2NvdW50LmNvbSIsInVpZCI6IlZvRGtOWiJ9.UJ1po7OIHvoA1MV39envrLp61nkel55bBurPh8oPf3mCudIw4mYfFA1GNJzgrv05-KO-F5vfTA455n8J1eZMr5TwQrleKj3IuYQ5vCAkoLat0XS_LuhYfryJy8xQbA71EGT1oaNzaPemv4rOkilpQNxnQ6oVE-mWNvvh3vHlqgh9KB7iejnQW8RbG1p8OCDVMk-UO039zRD7tqt18xNYqN8sgHX7ddvMqijcVKOVKTfwp2lGoXvmzue0XQYSDEZupXUIrCOL72TMZrstjDI9oLPTAGLg5mjpK7Y_Zr2S5zt8xhY-cRPNfghbiP9neqwwFoF08F_dQgRWApn7YlgO4Q"},"__pay_stripe_public_key":"pk_live_2GndomDfiklqpSNQn8FrGuwZSMIMzha7DkLJqlYe7IR0ihKAlKdiHg68JJc5eVPt68rzAjzAAVXcUwjySHRCsgjQQ00gtRBUFNH","__pay_braintree_env":"production"}</textarea>
-<script src="https://cpwebassets.codepen.io/assets/common/browser_support-2c1a3d31dbc6b5746fb7dacdbc81dd613906db219f13147c66864a6c3448246c.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/vendor-a08181532e624e51b211.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/1-ca3c45837455c0f9f1d4.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/everypage-c6eb73a07fe5f60b75f4.js"></script><div id="react-messages"><div style="position: fixed; z-index: 9999; inset: 16px; pointer-events: none;"></div></div><div></div>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/vendor-a08181532e624e51b211.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/1-ca3c45837455c0f9f1d4.chunk.js"></script>
-<script src="https://cpwebassets.codepen.io/assets/packs/js/referrer-tracking-01e12097f7b593c2c456.js"></script>
+let scene,
+camera,
+renderer,
+controls,
+mouseDown,
+world,
+night = false;
+
+let sheep,
+cloud,
+sky;
+
+let width,
+height;
+
+function init() {
+  width = window.innerWidth,
+  height = window.innerHeight;
+
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
+  camera.lookAt(scene.position);
+  camera.position.set(0, 0.7, 8);
+
+  renderer = new THREE.WebGLRenderer({ alpha: true });
+  renderer.setPixelRatio(window.devicePixelRatio);
+  renderer.setSize(width, height);
+  renderer.shadowMap.enabled = true;
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+
+  // controls = new THREE.OrbitControls(camera, renderer.domElement);
+  // controls.enableZoom = false;
+
+  addLights();
+  drawSheep();
+  drawCloud();
+  drawSky();
+
+  world = document.querySelector('.world');
+  world.appendChild(renderer.domElement);
+
+  document.addEventListener('mousedown', onMouseDown);
+  document.addEventListener('mouseup', onMouseUp);
+  document.addEventListener('touchstart', onTouchStart);
+  document.addEventListener('touchend', onTouchEnd);
+  window.addEventListener('resize', onResize);
+}
+
+function addLights() {
+  const light = new THREE.HemisphereLight(0xffffff, 0xffffff, 0.9);
+  scene.add(light);
+
+  const directLight1 = new THREE.DirectionalLight(0xffd798, 0.8);
+  directLight1.castShadow = true;
+  directLight1.position.set(9.5, 8.2, 8.3);
+  scene.add(directLight1);
+
+  const directLight2 = new THREE.DirectionalLight(0xc9ceff, 0.5);
+  directLight2.castShadow = true;
+  directLight2.position.set(-15.8, 5.2, 8);
+  scene.add(directLight2);
+}
+
+function drawSheep() {
+  sheep = new Sheep();
+  scene.add(sheep.group);
+}
+
+function drawCloud() {
+  cloud = new Cloud();
+  scene.add(cloud.group);
+}
+
+function drawSky() {
+  sky = new Sky();
+  sky.showNightSky(night);
+  scene.add(sky.group);
+}
+
+function onResize() {
+  width = window.innerWidth;
+  height = window.innerHeight;
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+  renderer.setSize(width, height);
+}
+
+function onMouseDown(event) {
+  mouseDown = true;
+}
+function onTouchStart(event) {
+  const targetClass = event.target.classList[0];
+  if (targetClass === 'toggle' || targetClass === 'toggle-music') return;
+  event.preventDefault();
+  mouseDown = true;
+}
+
+function onMouseUp() {
+  mouseDown = false;
+}
+function onTouchEnd(event) {
+  const targetClass = event.target.classList[0];
+  if (targetClass === 'toggle' || targetClass === 'toggle-music') return;
+  event.preventDefault();
+  mouseDown = false;
+}
+
+function rad(degrees) {
+  return degrees * (Math.PI / 180);
+}
+
+function animate() {
+  requestAnimationFrame(animate);
+
+  render();
+}
+
+function render() {
+
+  sheep.jumpOnMouseDown();
+  if (sheep.group.position.y > 0.4) cloud.bend();
+
+  sky.moveSky();
+
+  renderer.render(scene, camera);
+}
+
+class Sheep {
+  constructor() {
+    this.group = new THREE.Group();
+    this.group.position.y = 0.4;
+
+    this.woolMaterial = new THREE.MeshStandardMaterial({
+      color: 0xffffff,
+      roughness: 1,
+      shading: THREE.FlatShading });
+
+    this.skinMaterial = new THREE.MeshStandardMaterial({
+      color: 0xffaf8b,
+      roughness: 1,
+      shading: THREE.FlatShading });
+
+    this.darkMaterial = new THREE.MeshStandardMaterial({
+      color: 0x4b4553,
+      roughness: 1,
+      shading: THREE.FlatShading });
+
+
+    this.vAngle = 0;
+
+    this.drawBody();
+    this.drawHead();
+    this.drawLegs();
+  }
+  drawBody() {
+    const bodyGeometry = new THREE.IcosahedronGeometry(1.7, 0);
+    const body = new THREE.Mesh(bodyGeometry, this.woolMaterial);
+    body.castShadow = true;
+    body.receiveShadow = true;
+    this.group.add(body);
+  }
+  drawHead() {
+    const head = new THREE.Group();
+    head.position.set(0, 0.65, 1.6);
+    head.rotation.x = rad(-20);
+    this.group.add(head);
+
+    const foreheadGeometry = new THREE.BoxGeometry(0.7, 0.6, 0.7);
+    const forehead = new THREE.Mesh(foreheadGeometry, this.skinMaterial);
+    forehead.castShadow = true;
+    forehead.receiveShadow = true;
+    forehead.position.y = -0.15;
+    head.add(forehead);
+
+    const faceGeometry = new THREE.CylinderGeometry(0.5, 0.15, 0.4, 4, 1);
+    const face = new THREE.Mesh(faceGeometry, this.skinMaterial);
+    face.castShadow = true;
+    face.receiveShadow = true;
+    face.position.y = -0.65;
+    face.rotation.y = rad(45);
+    head.add(face);
+
+    const woolGeometry = new THREE.BoxGeometry(0.84, 0.46, 0.9);
+    const wool = new THREE.Mesh(woolGeometry, this.woolMaterial);
+    wool.position.set(0, 0.12, 0.07);
+    wool.rotation.x = rad(20);
+    head.add(wool);
+
+    const rightEyeGeometry = new THREE.CylinderGeometry(0.08, 0.1, 0.06, 6);
+    const rightEye = new THREE.Mesh(rightEyeGeometry, this.darkMaterial);
+    rightEye.castShadow = true;
+    rightEye.receiveShadow = true;
+    rightEye.position.set(0.35, -0.48, 0.33);
+    rightEye.rotation.set(rad(130.8), 0, rad(-45));
+    head.add(rightEye);
+
+    const leftEye = rightEye.clone();
+    leftEye.position.x = -rightEye.position.x;
+    leftEye.rotation.z = -rightEye.rotation.z;
+    head.add(leftEye);
+
+    const rightEarGeometry = new THREE.BoxGeometry(0.12, 0.5, 0.3);
+    rightEarGeometry.translate(0, -0.25, 0);
+    this.rightEar = new THREE.Mesh(rightEarGeometry, this.skinMaterial);
+    this.rightEar.castShadow = true;
+    this.rightEar.receiveShadow = true;
+    this.rightEar.position.set(0.35, -0.12, -0.07);
+    this.rightEar.rotation.set(rad(20), 0, rad(50));
+    head.add(this.rightEar);
+
+    this.leftEar = this.rightEar.clone();
+    this.leftEar.position.x = -this.rightEar.position.x;
+    this.leftEar.rotation.z = -this.rightEar.rotation.z;
+    head.add(this.leftEar);
+  }
+  drawLegs() {
+    const legGeometry = new THREE.CylinderGeometry(0.3, 0.15, 1, 4);
+    legGeometry.translate(0, -0.5, 0);
+    this.frontRightLeg = new THREE.Mesh(legGeometry, this.darkMaterial);
+    this.frontRightLeg.castShadow = true;
+    this.frontRightLeg.receiveShadow = true;
+    this.frontRightLeg.position.set(0.7, -0.8, 0.5);
+    this.frontRightLeg.rotation.x = rad(-12);
+    this.group.add(this.frontRightLeg);
+
+    this.frontLeftLeg = this.frontRightLeg.clone();
+    this.frontLeftLeg.position.x = -this.frontRightLeg.position.x;
+    this.frontLeftLeg.rotation.z = -this.frontRightLeg.rotation.z;
+    this.group.add(this.frontLeftLeg);
+
+    this.backRightLeg = this.frontRightLeg.clone();
+    this.backRightLeg.position.z = -this.frontRightLeg.position.z;
+    this.backRightLeg.rotation.x = -this.frontRightLeg.rotation.x;
+    this.group.add(this.backRightLeg);
+
+    this.backLeftLeg = this.frontLeftLeg.clone();
+    this.backLeftLeg.position.z = -this.frontLeftLeg.position.z;
+    this.backLeftLeg.rotation.x = -this.frontLeftLeg.rotation.x;
+    this.group.add(this.backLeftLeg);
+  }
+  jump(speed) {
+    this.vAngle += speed;
+    this.group.position.y = Math.sin(this.vAngle) + 1.38;
+
+    const legRotation = Math.sin(this.vAngle) * Math.PI / 6 + 0.4;
+
+    this.frontRightLeg.rotation.z = legRotation;
+    this.backRightLeg.rotation.z = legRotation;
+    this.frontLeftLeg.rotation.z = -legRotation;
+    this.backLeftLeg.rotation.z = -legRotation;
+
+    const earRotation = Math.sin(this.vAngle) * Math.PI / 3 + 1.5;
+
+    this.rightEar.rotation.z = earRotation;
+    this.leftEar.rotation.z = -earRotation;
+  }
+  jumpOnMouseDown() {
+    if (mouseDown) {
+      this.jump(0.05);
+    } else {
+      if (this.group.position.y <= 0.4) return;
+      this.jump(0.08);
+    }
+  }}
+
+
+class Cloud {
+  constructor() {
+    this.group = new THREE.Group();
+    this.group.position.y = -2;
+    this.group.scale.set(1.5, 1.5, 1.5);
+
+    this.material = new THREE.MeshStandardMaterial({
+      color: 0xacb3fb,
+      roughness: 1,
+      shading: THREE.FlatShading });
+
+
+    this.vAngle = 0;
+
+    this.drawParts();
+
+    this.group.traverse(part => {
+      part.castShadow = true;
+      part.receiveShadow = true;
+    });
+  }
+  drawParts() {
+    const partGeometry = new THREE.IcosahedronGeometry(1, 0);
+    this.upperPart = new THREE.Mesh(partGeometry, this.material);
+    this.group.add(this.upperPart);
+
+    this.leftPart = this.upperPart.clone();
+    this.leftPart.position.set(-1.2, -0.3, 0);
+    this.leftPart.scale.set(0.8, 0.8, 0.8);
+    this.group.add(this.leftPart);
+
+    this.rightPart = this.leftPart.clone();
+    this.rightPart.position.x = -this.leftPart.position.x;
+    this.group.add(this.rightPart);
+
+    this.frontPart = this.leftPart.clone();
+    this.frontPart.position.set(0, -0.4, 0.9);
+    this.frontPart.scale.set(0.7, 0.7, 0.7);
+    this.group.add(this.frontPart);
+
+    this.backPart = this.frontPart.clone();
+    this.backPart.position.z = -this.frontPart.position.z;
+    this.group.add(this.backPart);
+  }
+  bend() {
+    this.vAngle += 0.08;
+
+    this.upperPart.position.y = -Math.cos(this.vAngle) * 0.12;
+    this.leftPart.position.y = -Math.cos(this.vAngle) * 0.1 - 0.3;
+    this.rightPart.position.y = -Math.cos(this.vAngle) * 0.1 - 0.3;
+    this.frontPart.position.y = -Math.cos(this.vAngle) * 0.08 - 0.3;
+    this.backPart.position.y = -Math.cos(this.vAngle) * 0.08 - 0.3;
+  }}
+
+
+class Sky {
+  constructor() {
+    this.group = new THREE.Group();
+
+    this.daySky = new THREE.Group();
+    this.nightSky = new THREE.Group();
+
+    this.group.add(this.daySky);
+    this.group.add(this.nightSky);
+
+    this.colors = {
+      day: [0xFFFFFF, 0xEFD2DA, 0xC1EDED, 0xCCC9DE],
+      night: [0x5DC7B5, 0xF8007E, 0xFFC363, 0xCDAAFD, 0xDDD7FE] };
+
+
+    this.drawSky('day');
+    this.drawSky('night');
+    this.drawNightLights();
+  }
+  drawSky(phase) {
+    for (let i = 0; i < 30; i++) {
+      const geometry = new THREE.IcosahedronGeometry(0.4, 0);
+      const material = new THREE.MeshStandardMaterial({
+        color: this.colors[phase][Math.floor(Math.random() * this.colors[phase].length)],
+        roughness: 1,
+        shading: THREE.FlatShading });
+
+      const mesh = new THREE.Mesh(geometry, material);
+
+      mesh.position.set((Math.random() - 0.5) * 30,
+      (Math.random() - 0.5) * 30,
+      (Math.random() - 0.5) * 30);
+      if (phase === 'day') {
+        this.daySky.add(mesh);
+      } else {
+        this.nightSky.add(mesh);
+      }
+    }
+  }
+  drawNightLights() {
+    const geometry = new THREE.SphereGeometry(0.1, 5, 5);
+    const material = new THREE.MeshStandardMaterial({
+      color: 0xFF51B6,
+      roughness: 1,
+      shading: THREE.FlatShading });
+
+
+    for (let i = 0; i < 3; i++) {
+      const light = new THREE.PointLight(0xF55889, 2, 30);
+      const mesh = new THREE.Mesh(geometry, material);
+      light.add(mesh);
+
+      light.position.set((Math.random() - 2) * 6,
+      (Math.random() - 2) * 6,
+      (Math.random() - 2) * 6);
+      light.updateMatrix();
+      light.matrixAutoUpdate = false;
+
+      this.nightSky.add(light);
+    }
+  }
+  showNightSky(condition) {
+    if (condition) {
+      this.daySky.position.set(100, 100, 100);
+      this.nightSky.position.set(0, 0, 0);
+    } else {
+      this.daySky.position.set(0, 0, 0);
+      this.nightSky.position.set(100, 100, 100);
+    }
+  }
+  moveSky() {
+    this.group.rotation.x += 0.001;
+    this.group.rotation.y -= 0.004;
+  }}
+
+
+const toggleBtn = document.querySelector('.toggle');
+toggleBtn.addEventListener('click', toggleNight);
+
+const worldMusic = document.querySelector('.world-music');
+const btnMusic = document.querySelector('.toggle-music');
+let playMusic = false;
+btnMusic.addEventListener('click', toggleMusic);
+worldMusic.volume = 0.3;
+worldMusic.loop = true;
+
+function toggleNight() {
+  night = !night;
+
+  toggleBtn.classList.toggle('toggle-night');
+  world.classList.toggle('world-night');
+
+  sky.showNightSky(night);
+}
+
+function toggleMusic() {
+  playMusic = !playMusic;
+  btnMusic.classList.toggle('music-off');
+  playMusic ? worldMusic.play() : worldMusic.pause();
+}
+
+init();
+animate();
+//# sourceURL=pen.js
+    </script>
+
+  
+  <script src="https://cpwebassets.codepen.io/assets/editor/iframe/iframeRefreshCSS-44fe83e49b63affec96918c9af88c0d80b209a862cf87ac46bc933074b8c557d.js"></script>
+
 
 
 </body></html>
